@@ -9,7 +9,7 @@ const CREATE_BOARD = gql`
     }
   }
 `
-//#변수의 타입 적는 곳 #실제 우리가 전달할 변수 적는 곳
+// #변수의 타입 적는 곳 #실제 우리가 전달할 변수 적는 곳
 
 export default function GraphqlMutationPage(){
   const [myFunction] = useMutation(CREATE_BOARD)
@@ -20,7 +20,7 @@ export default function GraphqlMutationPage(){
         writer:"훈이",
         title:"안녕하세요",
         contents:"반갑습니다"
-      } //변수 넣는 곳 variables 자체가 $ 역할을 해준다.
+      } // 변수 넣는 곳 variables 자체가 $ 역할을 해준다.
     })
     console.log(result)
     alert(result.data.createBoard.message)

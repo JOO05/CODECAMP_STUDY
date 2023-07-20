@@ -21,9 +21,9 @@ export default function GraphqlMutationPage(){
   const onClickSubmit = async () => {
     const result = await myFunction({
       variables:{
-        writer:writer,
-        title:title,
-        contents:contents
+        writer,
+        title,
+        contents
       }
     })
     console.log(result)

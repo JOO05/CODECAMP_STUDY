@@ -1,4 +1,4 @@
-import BoardComponent from "../../src/components/units/board/08-board-component"
+import BoardComponent from "../../../src/components/units/board/08-board-component"
 
 export default function BoardNewPage() {
   return(

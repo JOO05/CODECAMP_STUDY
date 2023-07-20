@@ -1,5 +1,5 @@
 import { gql, useMutation } from '@apollo/client'
-import { Fragment, useState } from 'react'
+import { Fragment } from 'react'
 
 const CREATE_PRODUCT = gql`
   mutation createProduct($seller: String, $createProductInput: CreateProductInput!){ 
