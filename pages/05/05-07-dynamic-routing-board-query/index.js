@@ -3,11 +3,11 @@ import { useRouter } from 'next/router'
 export default function StaticRoutingPage(){
   const router = useRouter()
   const onClickMove1 = () => {
-    router.push("/05-08-dynamic-routed-board-query/1")
+    router.push("/05/05-08-dynamic-routed-board-query/1")
   }
 
   const onClickMove100 = () => {
-    router.push("/05-08-dynamic-routed-board-query/100")
+    router.push("/05/05-08-dynamic-routed-board-query/1433")
   }
   return (
     <>
