@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>this 이해</title>
+  <script>
+    class ClassCounterPage {
+      count = 10;
+      onClickCountUp = () => {
+        console.log(this.count)
+      }
+      render() {
+        const button = document.createElement("button")
+        button.innerText = "카운트 올리기!"
+        button.addEventListener("click", this.onClickCountUp)
+        document.body.appendChild(button)
+      }
+    }
+    window.onload = () => {
+      const counter = new ClassCounterPage()
+      counter.render()
+    }
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
