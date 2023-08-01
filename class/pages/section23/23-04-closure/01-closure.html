@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>클로저</title>
+  <script>
+    function a(){
+      const apple = 10
+      function b (){
+        const banana = 20
+        console.log(banana)
+        console.log(apple)
+        console.log(q)
+      }
+      const q = 3 // console 창에 실행된다.
+      b ()
+    }
+    a()
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

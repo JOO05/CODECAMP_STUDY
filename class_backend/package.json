@@ -1,0 +1,21 @@
+{
+  "name": "class_backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "q": "ts-node index.ts",
+    "d": "ts-node deco.ts"
+  },
+  "devDependencies": {
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "@apollo/server": "^4.8.1",
+    "apollo-server": "^3.12.0",
+    "graphql": "^16.7.1",
+    "pg": "^8.11.1",
+    "ts-node": "^10.9.1",
+    "typeorm": "^0.3.17"
+  }
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>클로저</title>
+  <script>
+    function a(){
+      const apple = 10
+      function b (){
+        const banana = 20
+        console.log("1",banana)
+        console.log("1",apple)
+        console.log("1",q)
+
+        function c (){
+          const tomato = 30
+          console.log(tomato)
+          console.log(banana)
+          console.log(apple)
+          console.log(q)
+        }
+      }
+      const q = 3
+      b ()
+    }
+    a()
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
