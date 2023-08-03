@@ -17,7 +17,6 @@ export default function LoginPage():JSX.Element {
   const [password, setPassword] = useState('')
   const [loginUser] = useMutation<Pick<IMutation,"loginUser">,IMutationLoginUserArgs>(LOGIN_USER)
   const [, setAccessToken] = useRecoilState(accessTokenState)
-  
   const onChangeEmail = (event: ChangeEvent<HTMLInputElement>):void => {
     setEmail(event.currentTarget.value)
   }
@@ -39,7 +38,6 @@ export default function LoginPage():JSX.Element {
       if (error instanceof Error ) alert(error.message)
     }
   }
-
   return (
     <>
     이메일: <input type="text" onChange={onChangeEmail} />
