@@ -1,6 +1,6 @@
 export type Maybe<T> = T | null;
 export type InputMaybe<T> = Maybe<T>;
-export type Exact<T extends { [key: string]: unknown }> = { [K in keyof T]: T[K] };
+export type Exact<T extends Record<string, unknown>> = { [K in keyof T]: T[K] };
 export type MakeOptional<T, K extends keyof T> = Omit<T, K> & { [SubKey in K]?: Maybe<T[SubKey]> };
 export type MakeMaybe<T, K extends keyof T> = Omit<T, K> & { [SubKey in K]: Maybe<T[SubKey]> };
 /** All built-in and custom scalars, mapped to their actual values */
@@ -311,30 +311,30 @@ export interface IPointTransaction {
 export interface IQuery {
   __typename?: 'Query';
   fetchBoard: IBoard;
-  fetchBoardComments: Array<IBoardComment>;
-  fetchBoards: Array<IBoard>;
+  fetchBoardComments: IBoardComment[];
+  fetchBoards: IBoard[];
   fetchBoardsCount: Scalars['Int'];
   fetchBoardsCountOfMine: Scalars['Int'];
-  fetchBoardsOfMine: Array<IBoard>;
-  fetchBoardsOfTheBest: Array<IBoard>;
-  fetchPointTransactions: Array<IPointTransaction>;
+  fetchBoardsOfMine: IBoard[];
+  fetchBoardsOfTheBest: IBoard[];
+  fetchPointTransactions: IPointTransaction[];
   fetchPointTransactionsCountOfBuying: Scalars['Int'];
   fetchPointTransactionsCountOfLoading: Scalars['Int'];
   fetchPointTransactionsCountOfSelling: Scalars['Int'];
-  fetchPointTransactionsOfBuying: Array<IPointTransaction>;
-  fetchPointTransactionsOfLoading: Array<IPointTransaction>;
-  fetchPointTransactionsOfSelling: Array<IPointTransaction>;
+  fetchPointTransactionsOfBuying: IPointTransaction[];
+  fetchPointTransactionsOfLoading: IPointTransaction[];
+  fetchPointTransactionsOfSelling: IPointTransaction[];
   fetchUseditem: IUseditem;
-  fetchUseditemQuestionAnswers: Array<IUseditemQuestionAnswer>;
-  fetchUseditemQuestions: Array<IUseditemQuestion>;
-  fetchUseditems: Array<IUseditem>;
+  fetchUseditemQuestionAnswers: IUseditemQuestionAnswer[];
+  fetchUseditemQuestions: IUseditemQuestion[];
+  fetchUseditems: IUseditem[];
   fetchUseditemsCountIBought: Scalars['Int'];
   fetchUseditemsCountIPicked: Scalars['Int'];
   fetchUseditemsCountISold: Scalars['Int'];
-  fetchUseditemsIBought: Array<IUseditem>;
-  fetchUseditemsIPicked: Array<IUseditem>;
-  fetchUseditemsISold: Array<IUseditem>;
-  fetchUseditemsOfTheBest: Array<IUseditem>;
+  fetchUseditemsIBought: IUseditem[];
+  fetchUseditemsIPicked: IUseditem[];
+  fetchUseditemsISold: IUseditem[];
+  fetchUseditemsOfTheBest: IUseditem[];
   fetchUserLoggedIn: IUser;
 }
 

@@ -1,3 +1,4 @@
+
 import * as yup from 'yup'
 export const schema = yup.object({
   writer: yup.string().required("작성자 입력하기"),

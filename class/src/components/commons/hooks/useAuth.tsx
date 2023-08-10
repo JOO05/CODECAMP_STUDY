@@ -6,6 +6,6 @@ export const useAuth = ():void => {
   useEffect(()=>{
     if(localStorage.getItem("accessToken")===null){
       alert("로그인 ㄱ")
-      void router.push("/section23/24-05-custom-hooks-use-auth")
+      void router.push("/z_quiz/section46/02")
     }},[])
 }

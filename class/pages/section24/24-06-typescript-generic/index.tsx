@@ -23,3 +23,7 @@ function getGeneric<MyType1, MyType2, MyType3>(arg1:MyType1, arg2:MyType2, arg3:
 getGeneric<string, number, boolean>("철수",123,true)
 // any와 똑같이 사용 가능하나 넣는 순간 넣은 것으로 타입이 고정된다.
 // 함수 사용할 때 앞에 <string, number, boolean>를 넣으면 넣기 전에 타입이 고정된다.
+const getGeneric2 = <M1, M2, M3>(arg1:M1, arg2:M2, arg3:M3):[M3,M2,M1] => {
+  return [arg3,arg2,arg1]
+}
+getGeneric2<string, number, boolean>("철수",123,true)

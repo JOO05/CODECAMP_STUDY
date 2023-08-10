@@ -8,6 +8,7 @@ interface IApolloSettingProps {
 const GLOBAL_STATE = new InMemoryCache()
 export default function ApolloSetting(props:IApolloSettingProps):JSX.Element {
   const [accessToken, setAccessToken] = useRecoilState(accessTokenState)
+
   
   if (process.browser) {
     const result = localStorage.getItem("accessToken")
