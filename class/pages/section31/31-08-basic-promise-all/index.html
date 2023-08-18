@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>Document</title>
+  <script>
+    const startPromise = async () => {
+      console.time("개별 Promise 테스트")
+      const result1 = await new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+          resolve("성공1")
+        },2000)
+      })
+      const result2 = await new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+          resolve("성공2")
+        },3000)
+      })
+      const result3 = await new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+          resolve("성공3")
+        },1000) 
+      })
+      const results = [result1,result2,result3]
+      console.log(results)
+      console.timeEnd("개별 Promise 테스트")
+    }
+    const startPromiseAll = async () => {
+      // await Promise.all([promise,promise,promise])의 구조다.
+      console.time("전체 Promise 테스트")
+      await Promise.all([
+        new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+          resolve("성공1")
+        },2000)
+        }),
+        new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+          resolve("성공2")
+        },3000)
+        }),
+        new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+          resolve("성공3")
+        },1000) 
+        })
+      ])
+      console.timeEnd("전체 Promise 테스트")
+    }
+  </script>
+</head>
+<body>
+  <button onclick="startPromise">Promise 연습</button>
+  <button onclick="startPromiseAll">Promise All 연습</button>
+</body>
+</html>

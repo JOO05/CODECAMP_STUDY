@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>이벤트루프</title>
+  <script>
+    const onClickLoop = () => {
+      console.log("시작")
+
+      // 비동기
+      setTimeout(()=> {
+        // 비동기
+        new Promise((resolve)=>resolve(3)).then(()=>{
+          console.log("Promise - setTimeout 안에서 실행")
+        })
+        console.log("setTimeout - 매크로 / 0초 뒤 실행")
+      },0)
+
+      // 비동기
+      new Promise((resolve)=>resolve(3)).then(()=>{
+        console.log("첫번째 Promise - 마이크로 / 0초 뒤 실행")
+      })
+
+      // 비동기
+      setInterval(()=>{
+        console.log("setInterval - 매크로 / 0초마다 실행")
+      },0)
+
+
+      let sum=0
+      for(let i=0;i<=9000;i++){
+        sum += 1
+      }
+
+      // 비동기
+      new Promise((resolve)=>resolve(3)).then(()=>{
+        console.log("두번째 Promise - 마이크로 / 0초 뒤 실행")
+      })
+
+      console.log("끝")
+    }
+  </script>
+</head>
+<body>
+  <button onclick="onClickLoop">시작</button>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>이벤트루프</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+        const onClickLoop = () => {
+          const a = () => {
+            try {
+              axios.get("https://qqqqq.com");
+              console.log("철수");
+            } catch (error) {
+            console.log("에러가 발생하였습니다!");
+            }
+          } // 없는 주소에서 가져오는데도 에러 못잡음
+          const b = async () => {
+            try {
+              await axios.get("https://qqqqq.com");
+              console.log("철수");
+            } catch (error) {
+            console.log("에러가 발생하였습니다!");
+            }
+          } // 없는 주소에서 가져와서 에러 잡음
+        }
+    </script>
+  </head>
+  <body>
+    <button onclick="onClickLoop">시작</button>
+  </body>
+</html>

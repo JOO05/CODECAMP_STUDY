@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>리플로우/리페인트</title>
+  <style>
+    .myreflow {
+      width: 100px;
+      height: 100px;
+      background-color: skyblue;
+    }
+    .myreflow:hover {
+      width: 100px;
+      height: 100px;
+    } /* 리플로우와 리페인트 동시 발생 */
+    .myrepaint {
+      width: 100px;
+      height: 100px;
+      background-color: yellow;
+    }
+    .myrepaint:hover {
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+  <div class="myreflow">리플로우 연습</div>
+  <div class="myrepaint">리페인트 연습</div>
+</body>
+</html>
