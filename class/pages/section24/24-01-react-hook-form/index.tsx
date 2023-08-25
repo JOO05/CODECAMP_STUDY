@@ -14,8 +14,8 @@ export default function ReactHookFormPage():JSX.Element{
   return(
     <form onSubmit={wrapFormAsync(handleSubmit(onClickSubmit))}>
       작성자: <input type='text' {...register("writer")} /><br />
-      제목: <input type='text' {...register("title")}  /><br />
-      내용: <input type='text' {...register("contents")}  /><br />
+      제목: <input type='text' {...register("title")} /><br />
+      내용: <input type='text' {...register("contents")} /><br />
       주소: <input type='text' {...register("boardAddress.addressDetail")}  /><br />
       <button>요청하기</button>
     </form>
