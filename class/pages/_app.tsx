@@ -7,14 +7,14 @@ import { globalStyles } from '../src/commons/styles/globalStyles'
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { RecoilRoot } from 'recoil'
 
-export default function App({ Component }:AppProps):JSX.Element {
+export default function App({ Component,pageProps }:AppProps):JSX.Element {
   return (
     <RecoilRoot>
     <ApolloSetting>
       <>
       <Global styles={globalStyles} />
       <Layout>
-        <Component />
+        <Component {...pageProps} />
       </Layout>
       </>
     </ApolloSetting>        
