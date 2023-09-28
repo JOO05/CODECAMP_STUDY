@@ -16,7 +16,8 @@ export default function FetchBoardsPage():JSX.Element{
   const {data, refetch} = useQuery<Pick<IQuery,"fetchBoards">,IQueryFetchBoardsArgs>(FETCH_BOARDS)
 
   const onClickPage = (event: MouseEvent<HTMLSpanElement>):void => {
-    void refetch({page:Number(event.currentTarget.id)})}
+    void refetch({page:Number(event.currentTarget.id)})
+  }
 
   return (
     <div>

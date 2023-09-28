@@ -1,7 +1,8 @@
 module.exports = {
   env: {
     browser: true,
-    es2021: true
+    es2021: true,
+    jest:true
   },
   extends: [
     'standard-with-typescript',
@@ -25,9 +26,7 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module'
   },
-  plugins: [
-    'react'
-  ],
+  plugins: ["react","jest/globals"],
   rules: {
     "react/react-in-jsx-scope": "off",
     "react/display-name":"off",
