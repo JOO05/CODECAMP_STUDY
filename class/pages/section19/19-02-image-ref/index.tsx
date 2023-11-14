@@ -23,13 +23,10 @@ export default function ImageUploadPage():JSX.Element {
     console.log(result.data?.uploadFile.url)
     setImageUrl(result.data?.uploadFile.url ?? "")
   }
-  const onClickImage = (): void => {
-    // document.getElementById("파일태그ID")?.click()
-    fileRef.current?.click();
-  }
+
   return (
     <>
-      <div style={{width:"100px", height:"100px", backgroundColor:"gray"}} onClick={onClickImage}>이미지 선택</div>
+      <div style={{width:"100px", height:"100px", backgroundColor:"gray"}} onClick={()=>{fileRef.current?.click();}}>이미지 선택</div>
       <input type="file" onChange={onChangeFile} style={{display:"none"}} ref={fileRef} />
       <img src={`https://storage.googleapis.com/${imageUrl}`} alt="" />
     </>

@@ -1,7 +1,8 @@
 import { DataSource } from "typeorm";
 import { Board } from "./Board.postgres";
-import { ApolloServer } from '@apollo/server';
+import { ApolloServer, ApolloServerOptions } from '@apollo/server';
 import { startStandaloneServer } from '@apollo/server/standalone';
+
 const typeDefs = `#graphql
   input CreateBoardInput {
     writer: String
@@ -43,15 +44,15 @@ const resolvers = {
     },
     deleteBoard: async () => {
       await Board.delete({})
-      await Board.update({number: 3},{deletedAt: new Date()})
-    }, 
+      await Board.update({number: 3},{deletedAt: new Date()} as Partial<Board> )
+    },
   }
 };
 
 const server = new ApolloServer({
   typeDefs, resolvers,
   cors: true,
-});
+}as ApolloServerOptions<object>);
 const AppDataSource = new DataSource({
   type: "postgres",
   host: "220.118.175.175",
