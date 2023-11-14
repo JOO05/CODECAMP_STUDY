@@ -55,10 +55,10 @@ const server = new ApolloServer({
 }as ApolloServerOptions<object>);
 const AppDataSource = new DataSource({
   type: "postgres",
-  host: "220.118.175.175",
-  port: 5001,
+  host: "",
+  port: 1,
   username: "postgres",
-  password: "postgres2022",
+  password: "postgres",
   database: "postgres",
   entities: [Board],
   synchronize: true,
