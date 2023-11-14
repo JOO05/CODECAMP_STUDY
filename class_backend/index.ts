@@ -54,12 +54,12 @@ const server = new ApolloServer({
   cors: true,
 }as ApolloServerOptions<object>);
 const AppDataSource = new DataSource({
-  type: "postgres",
+  type: "",
   host: "",
   port: 1,
-  username: "postgres",
-  password: "postgres",
-  database: "postgres",
+  username: "",
+  password: "",
+  database: "",
   entities: [Board],
   synchronize: true,
   logging: true
